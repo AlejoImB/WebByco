@@ -379,23 +379,39 @@ body {
 /* Alto contraste */
 .high-contrast {
   --ink: #000000 !important;
-  --snow: #ffffff !important;
   --mist: #ffffff !important;
   --brand: #ffff00 !important;
   --haze: #ffffff !important;
+  --snow: #ffffff !important;
   --brand-rgb: 255, 255, 0 !important;
   --haze-rgb: 255, 255, 255 !important;
+  --hairline: #ffffff !important;
 }
 
+/* Forzar fondos negros y textos blancos por defecto */
 .high-contrast * {
   background-color: #000000 !important;
+  background-image: none !important; /* Desactiva todos los degradados de fondo */
   color: #ffffff !important;
   border-color: #ffffff !important;
   text-shadow: none !important;
   box-shadow: none !important;
 }
 
-.high-contrast a, 
+/* Ocultar auroras, brillos y grano */
+.high-contrast .glow,
+.high-contrast .grain::after,
+.high-contrast body::after {
+  display: none !important;
+}
+
+.high-contrast body {
+  background-color: #000000 !important;
+  background-image: none !important;
+}
+
+/* Enlaces, botones, textos destacados y elementos interactivos en amarillo */
+.high-contrast a,
 .high-contrast button,
 .high-contrast a *,
 .high-contrast button *,
@@ -407,21 +423,33 @@ body {
 .high-contrast .spine-main,
 .high-contrast .spine-ghost,
 .high-contrast .spine-comet,
-.high-contrast .spine-branch {
+.high-contrast .spine-branch,
+.high-contrast .spine-label,
+.high-contrast .step.is-active .step-bar {
   color: #ffff00 !important;
   stroke: #ffff00 !important;
-  fill: #000000 !important;
+  -webkit-text-fill-color: currentColor !important; /* Corrige los gradientes de texto */
 }
 
+/* Corregir los trazados de SVG de adorno y grafos */
+.high-contrast svg,
 .high-contrast svg * {
   stroke: #ffffff !important;
   fill: none !important;
 }
 
+.high-contrast svg path[fill],
+.high-contrast svg circle[fill] {
+  fill: #000000 !important;
+  stroke: #ffff00 !important;
+}
+
+/* Botones específicos */
 .high-contrast .btn-primary,
 .high-contrast .btn-ghost {
   border: 2px solid #ffff00 !important;
   background-color: #000000 !important;
+  background-image: none !important;
   color: #ffff00 !important;
 }
 
@@ -433,5 +461,6 @@ body {
 
 .high-contrast .btn-primary:hover *,
 .high-contrast .btn-ghost:hover * {
+  background-color: #ffff00 !important;
   color: #000000 !important;
 }
