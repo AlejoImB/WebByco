@@ -1,4 +1,4 @@
-# Axioma — Experiencia digital corporativa
+# Byco— Experiencia digital corporativa
 
 Sitio de una sola página construido con React + Vite + Tailwind CSS + GSAP/ScrollTrigger + Lenis.
 Dirección visual: minimalismo tecnológico premium sobre la paleta corporativa.
