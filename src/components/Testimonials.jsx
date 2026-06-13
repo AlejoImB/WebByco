@@ -62,7 +62,7 @@ export default function Testimonials() {
       <div
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 bottom-0 h-[50vw] w-[50vw] max-h-[650px] max-w-[650px] -translate-x-1/2 rounded-full"
-        style={{ background: 'radial-gradient(circle, rgba(124,58,237,0.14), transparent 70%)', filter: 'blur(80px)' }}
+        style={{ background: 'radial-gradient(circle, rgba(var(--brand-rgb), 0.14), transparent 70%)', filter: 'blur(80px)' }}
       />
       <div className="container-site">
         <div data-t-head className="max-w-2xl">
@@ -79,20 +79,20 @@ export default function Testimonials() {
               data-quote
               className="flex flex-col justify-between rounded-2xl p-7 transition-all duration-500"
               style={{
-                background: 'linear-gradient(145deg, rgba(124,58,237,0.1), rgba(255,255,255,0.015))',
-                border: '1px solid rgba(124,58,237,0.22)',
+                background: 'linear-gradient(145deg, rgba(var(--brand-rgb), 0.1), rgba(255,255,255,0.015))',
+                border: '1px solid rgba(var(--brand-rgb), 0.22)',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(124,58,237,0.55)'
-                e.currentTarget.style.boxShadow = '0 20px 60px -20px rgba(124,58,237,0.4), 0 0 0 1px rgba(124,58,237,0.2)'
+                e.currentTarget.style.borderColor = 'rgba(var(--brand-rgb), 0.55)'
+                e.currentTarget.style.boxShadow = '0 20px 60px -20px rgba(var(--brand-rgb), 0.4), 0 0 0 1px rgba(var(--brand-rgb), 0.2)'
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(124,58,237,0.22)'
+                e.currentTarget.style.borderColor = 'rgba(var(--brand-rgb), 0.22)'
                 e.currentTarget.style.boxShadow = 'none'
               }}
             >
               <blockquote className="text-[14.5px] leading-relaxed text-mist">
-                <span aria-hidden="true" className="mb-3 block text-3xl leading-none text-haze" style={{ textShadow: '0 0 20px rgba(167,139,250,0.6)' }}>
+                <span aria-hidden="true" className="mb-3 block text-3xl leading-none text-haze" style={{ textShadow: '0 0 20px rgba(var(--haze-rgb), 0.6)' }}>
                   &ldquo;
                 </span>
                 {q.text}

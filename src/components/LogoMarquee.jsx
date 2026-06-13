@@ -13,7 +13,7 @@ const CLIENTS = [
 
 export default function LogoMarquee() {
   return (
-    <section aria-label="Empresas que confían en nosotros" className="relative py-9" style={{ borderTop: '1px solid rgba(124,58,237,0.2)', borderBottom: '1px solid rgba(124,58,237,0.2)' }}>
+    <section aria-label="Empresas que confían en nosotros" className="relative py-9" style={{ borderTop: '1px solid rgba(var(--brand-rgb), 0.2)', borderBottom: '1px solid rgba(var(--brand-rgb), 0.2)' }}>
       <div className="marquee overflow-hidden" role="presentation">
         <div className="marquee-track items-center gap-16 pr-16">
           {[...CLIENTS, ...CLIENTS].map((c, i) => (

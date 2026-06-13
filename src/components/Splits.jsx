@@ -8,11 +8,11 @@ gsap.registerPlugin(ScrollTrigger)
 
 function VisualIA() {
   return (
-    <div className="frame relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-3xl" style={{ boxShadow: '0 0 80px rgba(124,58,237,0.35), 0 40px 80px -40px rgba(0,0,0,0.9)' }}>
+    <div className="frame relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-3xl" style={{ boxShadow: '0 0 80px rgba(var(--brand-rgb),0.35), 0 40px 80px -40px rgba(0,0,0,0.9)' }}>
       <div
         aria-hidden="true"
         className="absolute inset-0"
-        style={{ background: 'radial-gradient(circle at 60% 40%, rgba(124,58,237,0.38), transparent 62%)' }}
+        style={{ background: 'radial-gradient(circle at 60% 40%, rgba(var(--brand-rgb),0.38), transparent 62%)' }}
       />
       <Suspense fallback={null}>
         <NeuralSphere className="relative h-full w-full" />
@@ -26,11 +26,11 @@ function VisualIA() {
 
 function VisualAuto() {
   return (
-    <div className="frame relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-3xl p-8" style={{ boxShadow: '0 0 80px rgba(124,58,237,0.3), 0 40px 80px -40px rgba(0,0,0,0.9)' }}>
+    <div className="frame relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-3xl p-8" style={{ boxShadow: '0 0 80px rgba(var(--brand-rgb),0.3), 0 40px 80px -40px rgba(0,0,0,0.9)' }}>
       <div
         aria-hidden="true"
         className="absolute inset-0"
-        style={{ background: 'radial-gradient(circle at 35% 70%, rgba(167,139,250,0.28), transparent 60%)' }}
+        style={{ background: 'radial-gradient(circle at 35% 70%, rgba(var(--haze-rgb),0.28), transparent 60%)' }}
       />
       <div className="relative flex h-full flex-col justify-center gap-4" aria-hidden="true">
         {[
@@ -40,7 +40,7 @@ function VisualAuto() {
           ['Pago programado', 'listo', false],
         ].map(([label, tag, done], i) => (
           <div key={i} className="flex items-center gap-3">
-            <span className={`h-2.5 w-2.5 rounded-full ${done ? 'bg-haze' : 'bg-mist/30'}`} style={done ? { boxShadow: '0 0 8px rgba(167,139,250,0.9)' } : undefined} />
+            <span className={`h-2.5 w-2.5 rounded-full ${done ? 'bg-haze' : 'bg-mist/30'}`} style={done ? { boxShadow: '0 0 8px rgba(var(--haze-rgb),0.9)' } : undefined} />
             <div className="frame flex flex-1 items-center justify-between rounded-xl px-4 py-3.5">
               <span className="text-sm text-snow">{label}</span>
               <span className="font-mono text-[9.5px] uppercase tracking-[0.14em] text-brand">{tag}</span>

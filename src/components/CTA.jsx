@@ -36,14 +36,14 @@ export default function CTA() {
   }, [])
 
   return (
-    <section id="contacto" ref={root} data-spine data-spine-label="Contacto" className="relative overflow-hidden py-36 md:py-44 border-t" style={{ borderColor: 'rgba(124,58,237,0.2)' }}>
+    <section id="contacto" ref={root} data-spine data-spine-label="Contacto" className="relative overflow-hidden py-36 md:py-44 border-t" style={{ borderColor: 'rgba(var(--brand-rgb), 0.2)' }}>
       {/* Aurora dramática centrada */}
       <div
         data-cta-glow
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-1/2 h-[70vw] max-h-[900px] w-[70vw] max-w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full"
         style={{
-          background: 'radial-gradient(circle, rgba(124,58,237,0.55) 0%, rgba(167,139,250,0.2) 40%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(var(--brand-rgb), 0.55) 0%, rgba(var(--haze-rgb), 0.2) 40%, transparent 70%)',
           filter: 'blur(50px)',
         }}
       />
@@ -51,7 +51,7 @@ export default function CTA() {
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-1/2 h-[35vw] max-h-[480px] w-[35vw] max-w-[480px] -translate-x-1/2 -translate-y-1/2 rounded-full"
         style={{
-          background: 'radial-gradient(circle, rgba(167,139,250,0.35) 0%, transparent 65%)',
+          background: 'radial-gradient(circle, rgba(var(--haze-rgb), 0.35) 0%, transparent 65%)',
           filter: 'blur(30px)',
         }}
       />

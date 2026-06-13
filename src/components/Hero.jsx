@@ -49,15 +49,15 @@ export default function Hero() {
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <div
           className="glow animate-drift-a left-[-8%] top-[-15%] h-[60vw] w-[60vw] max-h-[820px] max-w-[820px]"
-          style={{ background: 'radial-gradient(circle, rgba(124,58,237,0.42), transparent 65%)' }}
+          style={{ background: 'radial-gradient(circle, rgba(var(--brand-rgb), 0.42), transparent 65%)' }}
         />
         <div
           className="glow animate-drift-b bottom-[-20%] right-[-8%] h-[52vw] w-[52vw] max-h-[740px] max-w-[740px]"
-          style={{ background: 'radial-gradient(circle, rgba(167,139,250,0.32), transparent 65%)' }}
+          style={{ background: 'radial-gradient(circle, rgba(var(--haze-rgb), 0.32), transparent 65%)' }}
         />
         <div
           className="glow animate-drift-a left-1/2 top-1/2 h-[40vw] w-[40vw] max-h-[560px] max-w-[560px] -translate-x-1/2 -translate-y-1/2"
-          style={{ background: 'radial-gradient(circle, rgba(109,40,217,0.18), transparent 65%)' }}
+          style={{ background: 'radial-gradient(circle, rgba(var(--brand-rgb), 0.18), transparent 65%)' }}
         />
       </div>
 

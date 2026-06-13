@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 
 const LINKS = [
-  { href: '#servicios', label: 'Servicios' },
+  { href: '#capacidades', label: 'Capacidades' },
+  { href: '#proceso', label: 'Proceso' },
+  { href: '#proyectos', label: 'Proyectos' },
   { href: '#ia', label: 'IA' },
-  { href: '#casos', label: 'Casos de éxito' },
   { href: '#contacto', label: 'Contacto' },
 ]
 
@@ -35,7 +36,7 @@ export default function Nav() {
       }`}
     >
       <nav aria-label="Principal" className="container-site flex h-[72px] items-center justify-between">
-        <a href="#contenido" className="flex items-center gap-2.5" aria-label="Axioma — inicio">
+        <a href="#contenido" className="flex items-center gap-2.5" aria-label="Byco — inicio">
           <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true">
             <path d="M16 5 L27 27 H21.8 L16 14.8 L10.2 27 H5 Z" fill="#9395D3" />
             <circle cx="16" cy="25" r="2.4" fill="#B3B7EE" />

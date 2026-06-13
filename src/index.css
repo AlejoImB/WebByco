@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 /* ---------------------------------------------------------------------------
-   Axioma — sistema visual base (v2 — dark premium + impacto)
-   Paleta: ink #060412 · mist #9091AB · brand #7C3AED · haze #A78BFA · snow #F5F3FF
+   Byco — sistema visual base (v2 — dark premium + impacto)
+   Paleta: ink #000807 · mist #A2A3BB · brand #9395D3 · haze #B3B7EE · snow #FBF9FF
 --------------------------------------------------------------------------- */
 
 :root {
@@ -13,6 +13,8 @@
   --brand: #7c3aed;
   --haze: #a78bfa;
   --snow: #f5f3ff;
+  --brand-rgb: 124, 58, 237;
+  --haze-rgb: 167, 139, 250;
   --hairline: rgba(167, 139, 250, 0.2);
 }
 
@@ -26,11 +28,11 @@ body {
   overflow-x: hidden;
   /* Aurora permanente en la parte superior de la página */
   background-image:
-    radial-gradient(ellipse 90% 55% at 50% -5%, rgba(124, 58, 237, 0.22) 0%, transparent 70%);
+    radial-gradient(ellipse 90% 55% at 50% -5%, rgba(var(--brand-rgb), 0.22) 0%, transparent 70%);
 }
 
 ::selection {
-  background: rgba(124, 58, 237, 0.45);
+  background: rgba(var(--brand-rgb), 0.45);
   color: var(--snow);
 }
 
@@ -42,12 +44,12 @@ body {
   background: var(--ink);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(124, 58, 237, 0.35);
+  background: rgba(var(--brand-rgb), 0.35);
   border-radius: 99px;
   border: 2px solid var(--ink);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(124, 58, 237, 0.55);
+  background: rgba(var(--brand-rgb), 0.55);
 }
 
 /* Foco visible y consistente (accesibilidad) */
@@ -67,7 +69,7 @@ body {
 
 /* ---------------------------------------------------------------------------
    Utilidades de composición
---------------------------------------------------------------------------- */
+   --------------------------------------------------------------------------- */
 
 .container-site {
   @apply mx-auto w-full max-w-site px-6 md:px-10 lg:px-16;
@@ -75,7 +77,7 @@ body {
 
 .eyebrow {
   @apply font-mono text-[11px] font-semibold uppercase tracking-label text-haze;
-  text-shadow: 0 0 20px rgba(167, 139, 250, 0.6);
+  text-shadow: 0 0 20px rgba(var(--haze-rgb), 0.6);
 }
 
 .hairline {
@@ -119,7 +121,7 @@ body {
 
 /* Texto con luz de marca — más vibrante */
 .text-glint {
-  background: linear-gradient(100deg, #a78bfa, #c4b5fd 40%, #f5f3ff 100%);
+  background: linear-gradient(100deg, var(--haze), var(--brand) 40%, var(--snow) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -128,33 +130,33 @@ body {
 /* Botones */
 .btn-primary {
   @apply inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-snow transition-all duration-300 ease-smooth;
-  background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
-  box-shadow: 0 0 0 1px rgba(124, 58, 237, 0.4), 0 4px 24px -4px rgba(124, 58, 237, 0.5);
+  background: linear-gradient(135deg, var(--brand) 0%, var(--haze) 100%);
+  box-shadow: 0 0 0 1px rgba(var(--brand-rgb), 0.4), 0 4px 24px -4px rgba(var(--brand-rgb), 0.5);
 }
 .btn-primary:hover {
   background: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 100%);
-  box-shadow: 0 0 0 1px rgba(124, 58, 237, 0.6), 0 8px 40px -4px rgba(124, 58, 237, 0.65), 0 0 60px rgba(167, 139, 250, 0.25);
+  box-shadow: 0 0 0 1px rgba(var(--brand-rgb), 0.6), 0 8px 40px -4px rgba(var(--brand-rgb), 0.65), 0 0 60px rgba(var(--haze-rgb), 0.25);
   transform: translateY(-1px);
 }
 .btn-ghost {
   @apply inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium text-snow transition-all duration-300 ease-smooth;
-  border: 1px solid rgba(167, 139, 250, 0.3);
-  background: rgba(124, 58, 237, 0.06);
+  border: 1px solid rgba(var(--haze-rgb), 0.3);
+  background: rgba(var(--brand-rgb), 0.06);
 }
 .btn-ghost:hover {
-  border-color: rgba(167, 139, 250, 0.7);
-  background: rgba(124, 58, 237, 0.14);
-  box-shadow: 0 0 20px rgba(124, 58, 237, 0.2);
+  border-color: rgba(var(--haze-rgb), 0.7);
+  background: rgba(var(--brand-rgb), 0.14);
+  box-shadow: 0 0 20px rgba(var(--brand-rgb), 0.2);
   color: var(--haze);
 }
 
 /* Diagrama de servicios: estados de nodos y conexiones */
 .svc-node circle.ring {
-  stroke: rgba(167, 139, 250, 0.25);
+  stroke: rgba(var(--haze-rgb), 0.25);
   transition: stroke 0.6s ease, filter 0.6s ease;
 }
 .svc-node circle.dot {
-  fill: rgba(167, 139, 250, 0.4);
+  fill: rgba(var(--haze-rgb), 0.4);
   transition: fill 0.6s ease;
 }
 .svc-node text {
@@ -162,12 +164,12 @@ body {
   transition: fill 0.6s ease;
 }
 .svc-link {
-  stroke: rgba(167, 139, 250, 0.18);
+  stroke: rgba(var(--haze-rgb), 0.18);
   transition: stroke 0.6s ease;
 }
 .svc-node.is-active circle.ring {
   stroke: var(--brand);
-  filter: drop-shadow(0 0 12px rgba(124, 58, 237, 0.7));
+  filter: drop-shadow(0 0 12px rgba(var(--brand-rgb), 0.7));
 }
 .svc-node.is-active circle.dot {
   fill: var(--haze);
@@ -193,12 +195,12 @@ body {
 
 /* Mockups: marco de navegador / dispositivo construidos en CSS */
 .frame {
-  background: linear-gradient(180deg, rgba(124, 58, 237, 0.08), rgba(255, 255, 255, 0.02));
-  border: 1px solid rgba(124, 58, 237, 0.22);
+  background: linear-gradient(180deg, rgba(var(--brand-rgb), 0.08), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(var(--brand-rgb), 0.22);
   box-shadow:
-    0 1px 0 rgba(167, 139, 250, 0.12) inset,
+    0 1px 0 rgba(var(--haze-rgb), 0.12) inset,
     0 40px 80px -40px rgba(0, 0, 0, 0.9),
-    0 24px 90px -30px rgba(124, 58, 237, 0.3);
+    0 24px 90px -30px rgba(var(--brand-rgb), 0.3);
   backdrop-filter: blur(12px);
 }
 
@@ -225,17 +227,17 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 1.25rem;
-  border: 1px solid rgba(124, 58, 237, 0.22);
-  background: linear-gradient(145deg, rgba(124, 58, 237, 0.1), rgba(255, 255, 255, 0.015));
+  border: 1px solid rgba(var(--brand-rgb), 0.22);
+  background: linear-gradient(145deg, rgba(var(--brand-rgb), 0.1), rgba(255, 255, 255, 0.015));
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.5s ease, box-shadow 0.5s ease;
 }
 .tile:hover {
   transform: translateY(-6px);
-  border-color: rgba(124, 58, 237, 0.6);
+  border-color: rgba(var(--brand-rgb), 0.6);
   box-shadow:
-    0 0 0 1px rgba(124, 58, 237, 0.25),
-    0 30px 80px -20px rgba(124, 58, 237, 0.45),
-    0 0 60px -20px rgba(167, 139, 250, 0.2);
+    0 0 0 1px rgba(var(--brand-rgb), 0.25),
+    0 30px 80px -20px rgba(var(--brand-rgb), 0.45),
+    0 0 60px -20px rgba(var(--haze-rgb), 0.2);
 }
 .tile .tile-art {
   transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
@@ -254,14 +256,14 @@ body {
 /* Chips de tags — más vibrantes */
 .chip {
   @apply inline-flex items-center rounded-full px-3.5 py-1.5 font-mono text-[10.5px] uppercase tracking-[0.14em] text-haze;
-  border: 1px solid rgba(124, 58, 237, 0.5);
-  background: rgba(124, 58, 237, 0.15);
-  box-shadow: 0 0 12px rgba(124, 58, 237, 0.2);
+  border: 1px solid rgba(var(--brand-rgb), 0.5);
+  background: rgba(var(--brand-rgb), 0.15);
+  box-shadow: 0 0 12px rgba(var(--brand-rgb), 0.2);
 }
 
 /* ---------------------------------------------------------------------------
    Columna vertebral generativa (Spine)
---------------------------------------------------------------------------- */
+   --------------------------------------------------------------------------- */
 .spine-svg {
   position: absolute;
   top: 0;
@@ -273,7 +275,7 @@ body {
 }
 .spine-ghost {
   fill: none;
-  stroke: rgba(124, 58, 237, 0.1);
+  stroke: rgba(var(--brand-rgb), 0.1);
   stroke-width: 1.25;
 }
 .spine-main {
@@ -281,49 +283,49 @@ body {
   stroke: url(#spineGrad);
   stroke-width: 1.75;
   stroke-linecap: round;
-  filter: drop-shadow(0 0 8px rgba(124, 58, 237, 0.6));
+  filter: drop-shadow(0 0 8px rgba(var(--brand-rgb), 0.6));
 }
 .spine-comet {
   fill: var(--snow);
   transition: opacity 0.3s ease;
-  filter: drop-shadow(0 0 10px rgba(167, 139, 250, 1));
+  filter: drop-shadow(0 0 10px rgba(var(--haze-rgb), 1));
 }
 .spine-comet-halo {
-  fill: rgba(124, 58, 237, 0.3);
+  fill: rgba(var(--brand-rgb), 0.3);
   transition: opacity 0.3s ease;
 }
 .spine-ring {
-  fill: rgba(6, 4, 18, 0.92);
-  stroke: rgba(167, 139, 250, 0.35);
+  fill: rgba(0, 8, 7, 0.92);
+  stroke: rgba(var(--haze-rgb), 0.35);
   stroke-width: 1.25;
   transition: stroke 0.5s ease, filter 0.5s ease;
 }
 .spine-dot {
-  fill: rgba(167, 139, 250, 0.4);
+  fill: rgba(var(--haze-rgb), 0.4);
   transition: fill 0.5s ease;
 }
 .spine-node.is-active .spine-ring {
   stroke: var(--brand);
-  filter: drop-shadow(0 0 12px rgba(124, 58, 237, 0.85));
+  filter: drop-shadow(0 0 12px rgba(var(--brand-rgb), 0.85));
 }
 .spine-node.is-active .spine-dot {
   fill: var(--haze);
 }
 .spine-branch {
   fill: none;
-  stroke: rgba(124, 58, 237, 0.5);
+  stroke: rgba(var(--brand-rgb), 0.5);
   stroke-width: 1;
   transition: stroke-dashoffset 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .spine-branch-dot {
-  fill: rgba(167, 139, 250, 0.3);
+  fill: rgba(var(--haze-rgb), 0.3);
   transition: fill 0.5s ease;
 }
 .spine-node.is-active .spine-branch-dot {
   fill: var(--haze);
 }
 .spine-label {
-  fill: rgba(167, 139, 250, 0.5);
+  fill: rgba(var(--haze-rgb), 0.5);
   font-family: 'Geist Mono', monospace;
   font-size: 10px;
   letter-spacing: 0.14em;

@@ -63,7 +63,7 @@ export default function Statement() {
       <div
         aria-hidden="true"
         className="pointer-events-none absolute right-[-5%] top-1/2 h-[50vw] w-[50vw] max-h-[700px] max-w-[700px] -translate-y-1/2 rounded-full"
-        style={{ background: 'radial-gradient(circle, rgba(124,58,237,0.18), transparent 70%)', filter: 'blur(70px)' }}
+        style={{ background: 'radial-gradient(circle, rgba(var(--brand-rgb), 0.18), transparent 70%)', filter: 'blur(70px)' }}
       />
       <div className="container-site">
         <h2 className="text-[clamp(2.1rem,5.4vw,4.4rem)] font-semibold leading-[1.06] tracking-display text-snow">

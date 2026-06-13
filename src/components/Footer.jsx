@@ -30,9 +30,9 @@ const COLUMNS = [
 
 export default function Footer() {
   return (
-    <footer className="relative z-10" style={{ borderTop: '1px solid rgba(124,58,237,0.25)' }}>
+    <footer className="relative z-10" style={{ borderTop: '1px solid rgba(var(--brand-rgb), 0.25)' }}>
       {/* Guiño de fin de scroll */}
-      <div className="py-7 text-center" style={{ borderBottom: '1px solid rgba(124,58,237,0.18)' }}>
+      <div className="py-7 text-center" style={{ borderBottom: '1px solid rgba(var(--brand-rgb), 0.18)' }}>
         <p className="font-mono text-[11px] uppercase tracking-label text-haze/55">
           Fin del scroll. Ahora te toca a ti ;)
         </p>
@@ -84,7 +84,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col gap-3 pt-7 sm:flex-row sm:items-center sm:justify-between" style={{ borderTop: '1px solid rgba(124,58,237,0.18)' }}>
+        <div className="mt-16 flex flex-col gap-3 pt-7 sm:flex-row sm:items-center sm:justify-between" style={{ borderTop: '1px solid rgba(var(--brand-rgb), 0.18)' }}>
           <p className="text-xs text-mist/60">© {new Date().getFullYear()} Byco. Todos los derechos reservados.</p>
           <p className="font-mono text-[10px] uppercase tracking-label text-mist/40">
             Diseñado y construido internamente — sin plantillas
