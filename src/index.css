@@ -388,8 +388,8 @@ body {
   --hairline: #ffffff !important;
 }
 
-/* Forzar fondos negros y textos blancos por defecto */
-.high-contrast * {
+/* Forzar fondos negros y textos blancos por defecto, excepto en el panel de accesibilidad */
+.high-contrast *:not(.accessibility-widget):not(.accessibility-widget *) {
   background-color: #000000 !important;
   background-image: none !important; /* Desactiva todos los degradados de fondo */
   color: #ffffff !important;
@@ -411,10 +411,10 @@ body {
 }
 
 /* Enlaces, botones, textos destacados y elementos interactivos en amarillo */
-.high-contrast a,
-.high-contrast button,
-.high-contrast a *,
-.high-contrast button *,
+.high-contrast a:not(.accessibility-widget *),
+.high-contrast button:not(.accessibility-widget),
+.high-contrast a:not(.accessibility-widget *) *,
+.high-contrast button:not(.accessibility-widget) *,
 .high-contrast .text-glint,
 .high-contrast .eyebrow,
 .high-contrast .step-bar,
@@ -432,14 +432,14 @@ body {
 }
 
 /* Corregir los trazados de SVG de adorno y grafos */
-.high-contrast svg,
-.high-contrast svg * {
+.high-contrast svg:not(.accessibility-widget *),
+.high-contrast svg:not(.accessibility-widget *) * {
   stroke: #ffffff !important;
   fill: none !important;
 }
 
-.high-contrast svg path[fill],
-.high-contrast svg circle[fill] {
+.high-contrast svg:not(.accessibility-widget *) path[fill],
+.high-contrast svg:not(.accessibility-widget *) circle[fill] {
   fill: #000000 !important;
   stroke: #ffff00 !important;
 }

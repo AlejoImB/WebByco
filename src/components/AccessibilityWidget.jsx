@@ -58,7 +58,7 @@ export default function AccessibilityWidget() {
   }
 
   return (
-    <div ref={widgetRef} className="fixed bottom-6 right-6 z-50 font-sans">
+    <div ref={widgetRef} className="fixed bottom-6 right-6 z-50 font-sans accessibility-widget">
       {/* Panel Desplegable */}
       {isOpen && (
         <div 
