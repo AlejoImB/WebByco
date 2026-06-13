@@ -378,24 +378,25 @@ body {
 
 /* Alto contraste */
 .high-contrast {
-  --ink: #000000 !important;
-  --mist: #ffffff !important;
-  --brand: #ffff00 !important;
-  --haze: #ffffff !important;
-  --snow: #ffffff !important;
-  --brand-rgb: 255, 255, 0 !important;
-  --haze-rgb: 255, 255, 255 !important;
-  --hairline: #ffffff !important;
+  --ink: #000000;
+  --mist: #ffffff;
+  --brand: #ffff00;
+  --haze: #ffffff;
+  --snow: #ffffff;
+  --brand-rgb: 255, 255, 0;
+  --haze-rgb: 255, 255, 255;
+  --hairline: #ffffff;
 }
 
-/* Forzar fondos negros y textos blancos por defecto, excepto en el panel de accesibilidad */
+/* Fondos negros + textos blancos en todo el sitio, excepto el widget de accesibilidad */
 .high-contrast *:not(.accessibility-widget):not(.accessibility-widget *) {
-  background-color: #000000 !important;
-  background-image: none !important; /* Desactiva todos los degradados de fondo */
+  background: #000000 !important;
   color: #ffffff !important;
   border-color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
   text-shadow: none !important;
   box-shadow: none !important;
+  filter: none !important;
 }
 
 /* Ocultar auroras, brillos y grano */
@@ -405,33 +406,45 @@ body {
   display: none !important;
 }
 
-.high-contrast body {
-  background-color: #000000 !important;
-  background-image: none !important;
+/* Ocultar cualquier div decorativo con blur en su estilo inline (glows de sección sin clase .glow) */
+.high-contrast [style*="blur"]:not(.accessibility-widget):not(.accessibility-widget *) {
+  display: none !important;
 }
 
-/* Enlaces, botones, textos destacados y elementos interactivos en amarillo */
-.high-contrast a:not(.accessibility-widget *),
-.high-contrast button:not(.accessibility-widget),
-.high-contrast a:not(.accessibility-widget *) *,
-.high-contrast button:not(.accessibility-widget) *,
-.high-contrast .text-glint,
-.high-contrast .eyebrow,
-.high-contrast .step-bar,
-.high-contrast .spine-ring,
-.high-contrast .spine-dot,
-.high-contrast .spine-main,
-.high-contrast .spine-ghost,
-.high-contrast .spine-comet,
-.high-contrast .spine-branch,
-.high-contrast .spine-label,
-.high-contrast .step.is-active .step-bar {
+.high-contrast body {
+  background: #000000 !important;
+}
+
+/* Tarjetas: borde explícito para garantizar visibilidad sobre fondo negro */
+.high-contrast figure,
+.high-contrast .tile,
+.high-contrast .frame {
+  border: 2px solid #ffffff !important;
+}
+
+/* Interactivos y textos destacados en amarillo */
+/* Los selectores de clase necesitan especificidad (0,4,0) para superar la regla base (0,3,0) */
+.high-contrast a:not(.accessibility-widget):not(.accessibility-widget *),
+.high-contrast button:not(.accessibility-widget):not(.accessibility-widget *),
+.high-contrast a:not(.accessibility-widget):not(.accessibility-widget *) *,
+.high-contrast button:not(.accessibility-widget):not(.accessibility-widget *) *,
+.high-contrast .text-glint:not(.accessibility-widget):not(.accessibility-widget *),
+.high-contrast .eyebrow:not(.accessibility-widget):not(.accessibility-widget *),
+.high-contrast .step-bar:not(.accessibility-widget):not(.accessibility-widget *),
+.high-contrast .spine-ring:not(.accessibility-widget):not(.accessibility-widget *),
+.high-contrast .spine-dot:not(.accessibility-widget):not(.accessibility-widget *),
+.high-contrast .spine-main:not(.accessibility-widget):not(.accessibility-widget *),
+.high-contrast .spine-ghost:not(.accessibility-widget):not(.accessibility-widget *),
+.high-contrast .spine-comet:not(.accessibility-widget):not(.accessibility-widget *),
+.high-contrast .spine-branch:not(.accessibility-widget):not(.accessibility-widget *),
+.high-contrast .spine-label:not(.accessibility-widget):not(.accessibility-widget *),
+.high-contrast .step.is-active .step-bar:not(.accessibility-widget):not(.accessibility-widget *) {
   color: #ffff00 !important;
   stroke: #ffff00 !important;
-  -webkit-text-fill-color: currentColor !important; /* Corrige los gradientes de texto */
+  -webkit-text-fill-color: #ffff00 !important;
 }
 
-/* Corregir los trazados de SVG de adorno y grafos */
+/* SVG decorativos y grafos */
 .high-contrast svg:not(.accessibility-widget *),
 .high-contrast svg:not(.accessibility-widget *) * {
   stroke: #ffffff !important;
@@ -444,23 +457,52 @@ body {
   stroke: #ffff00 !important;
 }
 
-/* Botones específicos */
+/* Botones de acción */
 .high-contrast .btn-primary,
 .high-contrast .btn-ghost {
   border: 2px solid #ffff00 !important;
-  background-color: #000000 !important;
-  background-image: none !important;
+  background: #000000 !important;
   color: #ffff00 !important;
 }
 
 .high-contrast .btn-primary:hover,
 .high-contrast .btn-ghost:hover {
-  background-color: #ffff00 !important;
+  background: #ffff00 !important;
   color: #000000 !important;
 }
 
 .high-contrast .btn-primary:hover *,
 .high-contrast .btn-ghost:hover * {
-  background-color: #ffff00 !important;
+  background: #ffff00 !important;
   color: #000000 !important;
+}
+
+/* Widget de accesibilidad: visible y funcional en alto contraste */
+.high-contrast .accessibility-widget > button {
+  background: #000000 !important;
+  border: 2px solid #ffff00 !important;
+  color: #ffff00 !important;
+  box-shadow: none !important;
+}
+
+.high-contrast .accessibility-widget > div {
+  background: #111111 !important;
+  border: 1px solid #ffffff !important;
+}
+
+.high-contrast .accessibility-widget button[aria-pressed] {
+  background: #333333 !important;
+  border: 2px solid #ffffff !important;
+}
+
+.high-contrast .accessibility-widget button[aria-pressed="true"] {
+  background: #ffff00 !important;
+}
+
+.high-contrast .accessibility-widget button[aria-pressed] > span {
+  background: #ffffff !important;
+}
+
+.high-contrast .accessibility-widget button[aria-pressed="true"] > span {
+  background: #000000 !important;
 }
