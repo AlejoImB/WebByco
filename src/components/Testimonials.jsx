@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const QUOTES = [
   {
-    text: 'Hay muchas empresas de software. Pocas que entiendan tu negocio antes de escribir una línea de código. Axioma captó la esencia de nuestra idea y la convirtió en un sistema que usamos cada día.',
+    text: 'Hay muchas empresas de software. Pocas que entiendan tu negocio antes de escribir una línea de código. Byco captó la esencia de nuestra idea y la convirtió en un sistema que usamos cada día.',
     name: 'Julia Santamaría',
     role: 'Directora Comercial · Grupo Mirlo',
   },

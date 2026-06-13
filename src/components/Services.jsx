@@ -151,7 +151,7 @@ export default function Services() {
               <svg
                 viewBox="0 0 520 520"
                 role="img"
-                aria-label="Diagrama del ecosistema de capacidades de Axioma conectadas a un núcleo común"
+                aria-label="Diagrama del ecosistema de capacidades de Byco conectadas a un núcleo común"
                 className="mx-auto w-full max-w-[520px]"
               >
                 <defs>

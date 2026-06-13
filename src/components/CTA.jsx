@@ -66,7 +66,7 @@ export default function CTA() {
           compromiso y sin guion comercial.
         </p>
         <div className="mt-11 flex flex-wrap items-center justify-center gap-4">
-          <a href="mailto:hola@axioma.dev" className="btn-primary">
+          <a href="mailto:hola@byco.dev" className="btn-primary">
             Hablemos de tu proyecto
           </a>
           <a href="tel:+34925000000" className="btn-ghost">

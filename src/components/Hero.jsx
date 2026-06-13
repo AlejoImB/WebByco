@@ -63,7 +63,7 @@ export default function Hero() {
 
       <div data-hero-inner className="container-site relative z-10 pb-20 pt-40">
         <p data-hero-eyebrow className="eyebrow mb-8">
-          Axioma · Partner tecnológico
+          Byco · Partner tecnológico
         </p>
 
         <h1 className="max-w-4xl text-[clamp(2.8rem,7.2vw,6.2rem)] font-semibold leading-[1.04] tracking-display text-snow">

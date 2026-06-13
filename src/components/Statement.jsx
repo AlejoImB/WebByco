@@ -82,7 +82,7 @@ export default function Statement() {
 
         <div className="mt-12 grid gap-12 lg:grid-cols-2 lg:gap-20">
           <p data-st-copy className="max-w-lg text-lg leading-relaxed text-mist">
-            Por eso existimos. En <strong className="font-semibold text-snow">Axioma</strong>{' '}
+            Por eso existimos. En <strong className="font-semibold text-snow">Byco</strong>{' '}
             transformamos tu negocio con estrategia, ingeniería e innovación que dan resultados
             medibles. Y sí: llegamos a tiempo.
           </p>

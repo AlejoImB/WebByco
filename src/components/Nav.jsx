@@ -40,7 +40,7 @@ export default function Nav() {
             <path d="M16 5 L27 27 H21.8 L16 14.8 L10.2 27 H5 Z" fill="#9395D3" />
             <circle cx="16" cy="25" r="2.4" fill="#B3B7EE" />
           </svg>
-          <span className="text-[15px] font-semibold tracking-tight text-snow">Axioma</span>
+          <span className="text-[15px] font-semibold tracking-tight text-snow">Byco</span>
         </a>
 
         <ul className="hidden items-center gap-9 md:flex">

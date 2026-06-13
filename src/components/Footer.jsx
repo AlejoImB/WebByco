@@ -41,12 +41,12 @@ export default function Footer() {
       <div className="container-site py-16 md:py-20">
         <div className="grid gap-12 md:grid-cols-[1.4fr_repeat(3,1fr)]">
           <div>
-            <a href="#contenido" className="flex items-center gap-2.5" aria-label="Axioma — inicio">
+            <a href="#contenido" className="flex items-center gap-2.5" aria-label="Byco — inicio">
               <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true">
                 <path d="M16 5 L27 27 H21.8 L16 14.8 L10.2 27 H5 Z" fill="#9395D3" />
                 <circle cx="16" cy="25" r="2.4" fill="#B3B7EE" />
               </svg>
-              <span className="text-[15px] font-semibold tracking-tight text-snow">Axioma</span>
+              <span className="text-[15px] font-semibold tracking-tight text-snow">Byco</span>
             </a>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-mist">
               Tu partner tecnológico: software a medida, datos e inteligencia artificial que dan
@@ -85,7 +85,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col gap-3 pt-7 sm:flex-row sm:items-center sm:justify-between" style={{ borderTop: '1px solid rgba(124,58,237,0.18)' }}>
-          <p className="text-xs text-mist/60">© {new Date().getFullYear()} Axioma. Todos los derechos reservados.</p>
+          <p className="text-xs text-mist/60">© {new Date().getFullYear()} Byco. Todos los derechos reservados.</p>
           <p className="font-mono text-[10px] uppercase tracking-label text-mist/40">
             Diseñado y construido internamente — sin plantillas
           </p>
