@@ -375,3 +375,63 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Alto contraste */
+.high-contrast {
+  --ink: #000000 !important;
+  --snow: #ffffff !important;
+  --mist: #ffffff !important;
+  --brand: #ffff00 !important;
+  --haze: #ffffff !important;
+  --brand-rgb: 255, 255, 0 !important;
+  --haze-rgb: 255, 255, 255 !important;
+}
+
+.high-contrast * {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.high-contrast a, 
+.high-contrast button,
+.high-contrast a *,
+.high-contrast button *,
+.high-contrast .text-glint,
+.high-contrast .eyebrow,
+.high-contrast .step-bar,
+.high-contrast .spine-ring,
+.high-contrast .spine-dot,
+.high-contrast .spine-main,
+.high-contrast .spine-ghost,
+.high-contrast .spine-comet,
+.high-contrast .spine-branch {
+  color: #ffff00 !important;
+  stroke: #ffff00 !important;
+  fill: #000000 !important;
+}
+
+.high-contrast svg * {
+  stroke: #ffffff !important;
+  fill: none !important;
+}
+
+.high-contrast .btn-primary,
+.high-contrast .btn-ghost {
+  border: 2px solid #ffff00 !important;
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+}
+
+.high-contrast .btn-primary:hover,
+.high-contrast .btn-ghost:hover {
+  background-color: #ffff00 !important;
+  color: #000000 !important;
+}
+
+.high-contrast .btn-primary:hover *,
+.high-contrast .btn-ghost:hover * {
+  color: #000000 !important;
+}

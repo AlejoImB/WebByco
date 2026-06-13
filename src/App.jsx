@@ -11,6 +11,7 @@ import Splits from './components/Splits.jsx'
 import Testimonials from './components/Testimonials.jsx'
 import CTA from './components/CTA.jsx'
 import Footer from './components/Footer.jsx'
+import AccessibilityWidget from './components/AccessibilityWidget.jsx'
 import { useSmoothScroll } from './hooks/useSmoothScroll.js'
 
 export default function App() {
@@ -36,6 +37,7 @@ export default function App() {
         <CTA />
       </main>
       <Footer />
+      <AccessibilityWidget />
     </div>
   )
 }
